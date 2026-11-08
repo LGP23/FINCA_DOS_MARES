@@ -1,0 +1,11 @@
+# perfiles temporales de Chrome y capturas del control de calidad
+.taste-skill/
+shots/
+
+# material binario del negocio (backup WP de 113MB, etc.)
+fincadosmares.com-*.wpress
+*.wpress
+
+# sistema
+Thumbs.db
+Desktop.ini

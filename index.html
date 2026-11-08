@@ -1,0 +1,274 @@
+<!doctype html>
+<!-- PLAN (BRIEF.md):
+     type: place · paleta: warm-paper-walnut · tipos: Besley/Albert Sans · radius soft · botones solid
+     deal: nav nav-split (re-deal de nav-cards: sin páginas hermanas), footer footer-visit,
+           rhythm surface-pairs, offer cards de 3 kinds, place-composition no usada (sin foto panorámica),
+           type moment address, rooms rows. Momentos dealados (word-highlight, picture-develops) no montados:
+           sus módulos no existen en esta instalación del kit; la página sale con la capa hover y la
+           entrada del hero del kit.
+     Fotos: hero comedor (cliente) · visit dormitorio (cliente) · tarjeta hotel (stand-in f59466255) ·
+            casa rural (cliente) · camper (cliente) · mesa: pan y granola (biblioteca). -->
+<html lang="es" data-type="place" data-radius="soft" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Finca dos Mares: casa rural con encanto en Ferrol</title>
+<meta name="description" content="Hotel boutique con siete habitaciones con vistas al mar, cocina de mercado y furgoneta de alquiler, cerca de las playas de Ferrol, A Coruña.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Finca dos Mares: casa rural con encanto en Ferrol">
+<meta property="og:description" content="Hotel boutique, cocina de mercado y furgoneta de alquiler, a pocos minutos del mar de la ría de Ferrol.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/logo-finca-dos-mares.png" type="image/png">
+<meta name="theme-color" content="#f7f3ec">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="place">
+<meta name="page-kind" content="place">
+<!-- <link rel="canonical" href="https://fincadosmares.com/"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Besley:wght@400..600&family=Albert+Sans:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<link rel="stylesheet" href="assets/ui/base.css">
+<style>
+:root {
+  --p-bg: #f7f3ec; --p-surface: #ede6da; --p-ink: #2a2622; --p-muted: #665e55;
+  --p-accent: #7a4a2c; --p-accent-ink: #ffffff; --p-action: #7a4a2c; --p-action-ink: #ffffff;
+  --p-inv-bg: #2a2622; --p-inv-surface: #36322e; --p-inv-ink: #f7f3ec; --p-inv-muted: #a29e98;
+  --p-inv-accent: #f7f3ec; --p-inv-accent-ink: #2a2622; --p-inv-action: #f7f3ec; --p-inv-action-ink: #2a2622;
+  --font-display: "Besley", Georgia, serif;
+  --font-text: "Albert Sans", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.02em;
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<style>
+/* momento address: la ciudad al tamaño del h2 bajo el h2 de la visita (sections.md, Designed variety) */
+.type-moment { font: var(--display-weight) clamp(48px, 7vw, 104px)/1.02 var(--font-display); letter-spacing: -0.03em; }
+/* tablet (640-1023): las tarjetas de la finca apiladas ocupan dos pantallas (layout-v4.md, sección 2) */
+@media (min-width: 640px) and (max-width: 1279px) { #finca { --h: 2 } }
+/* móvil: el panel de la visita a 24px (sections.md, sección 4: "at 390 the panel first (24px padding)") */
+@media (max-width: 639px) { #visit .visit--card { padding: 24px } }
+</style>
+</head>
+<body>
+<!-- FINCA DOS MARES · index ES · place -->
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Ir al contenido</a>
+    <a class="nav__logo" href="#top"><img src="assets/img/logo-finca-dos-mares.png" alt="Finca dos Mares" width="72" height="43"></a>
+    <nav class="nav__links" aria-label="Principal">
+      <div class="nav__item"><a class="nav__link" href="#habitaciones">Habitaciones</a></div>
+      <div class="nav__item"><a class="nav__link" href="#mesa">La mesa</a></div>
+      <div class="nav__item"><a class="nav__link" href="#finca">La finca</a></div>
+      <div class="nav__item"><a class="nav__link" href="#visit">Contacto</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="#reservar">Reservar<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menú">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO place: fotografía a sangre bajo el encabezado, nada sobre ella; las palabras en el suelo bajo ella -->
+  <section class="hero hero--place" data-enter aria-labelledby="hero-h">
+    <picture class="hero__bg">
+      <source media="(max-width: 639px)" srcset="assets/img/comedor-finca-phone.jpg" width="820" height="1024">
+      <img data-phone-fill src="assets/img/comedor-finca.jpg" srcset="assets/img/comedor-finca-960.jpg 960w, assets/img/comedor-finca.jpg 1536w" sizes="100vw" alt="El comedor de la finca bajo un techo acristalado, mesas servidas y lámparas colgadas" width="1536" height="1024" data-source="client" data-subject="restaurante">
+    </picture>
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <p class="hero-notice">Lunes cerrado por descanso.</p>
+        <h1 id="hero-h">Casa rural con encanto en Ferrol</h1>
+        <p class="hero__lead">Hotel boutique de 7 habitaciones con vistas al mar y cocina de mercado en Ferrol.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="#reservar">Reservar<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- VISIT: pantalla 2 · momento address: la ciudad grande; panel con dirección, teléfono y horario real -->
+  <section class="section" id="visit" data-place="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="visit-h">La finca en Ferrol</h2></div>
+      <p class="type-moment">Ferrol</p>
+      <div class="grid grid--top fill">
+        <div class="visit visit--card span-6">
+          <div class="visit__head"><p class="t-label">La finca</p></div>
+          <div class="visit__cols">
+            <div class="visit__col stack-4">
+              <address class="visit__address">Ferrol<br>A Coruña</address>
+              <div class="btn-row">
+                <a class="btn btn--secondary" href="tel:+34610866150">Llamar</a>
+              </div>
+            </div>
+            <div class="visit__col">
+              <dl class="hours" data-tz="Europe/Madrid">
+                <dt data-days="tue-sun">Martes a domingo</dt><dd>Del desayuno a la cena</dd>
+                <dt data-days="mon">Lunes</dt><dd>Cerrado</dd>
+              </dl>
+            </div>
+          </div>
+          <ul class="visit__rows">
+            <li><span>Cocina de mercado</span><span>La carta cambia cada día con el mercado</span></li>
+            <li><span>Masajes y tratamientos</span><span>Con reserva previa</span></li>
+          </ul>
+        </div>
+        <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: 1.33">
+          <img src="assets/img/habitacion-finca-960.jpg" srcset="assets/img/habitacion-finca-960.jpg 960w, assets/img/habitacion-finca.jpg 1536w" sizes="(max-width: 1023px) 100vw, 588px" width="960" height="640" alt="Una de las habitaciones de la finca, con el cartel de Mucha sobre la cama y la puerta abierta al jardín" loading="lazy" decoding="async" data-source="client" data-subject="habitacion">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA FINCA: tres clases de estancia, tarjetas 4:3 a fila -->
+  <section class="section" id="finca" style="--hm: 2" aria-labelledby="finca-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="finca-h">Hotel boutique, casa rural y camper. <span class="muted">Tres formas de quedarse en la finca.</span></h2>
+      </div>
+      <div class="grid">
+        <article class="card card--row span-4">
+          <h3 class="t-card">Hotel boutique</h3>
+          <p>Siete habitaciones con vistas al mar.</p>
+          <a class="link" href="#reservar">Preguntar por una habitación<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <div class="panel" style="--ratio: 75%"><img class="frame__img" src="assets/img/photo-f59466255-960.jpg" srcset="assets/img/photo-f59466255-500.jpg 500w, assets/img/photo-f59466255-960.jpg 960w" sizes="(max-width: 1023px) 100vw, 384px" width="960" height="640" alt="Una habitación del hotel boutique al calor de las lámparas" loading="lazy" decoding="async" data-source="stand-in" data-subject="habitacion"></div>
+        </article>
+        <article class="card card--row span-4">
+          <h3 class="t-card">Casa rural</h3>
+          <p>La casa completa para tu grupo, con chimenea y jardín.</p>
+          <a class="link" href="#reservar">Preguntar por la casa<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <div class="panel" style="--ratio: 75%"><img class="frame__img" src="assets/img/casa-rural-salon.jpg" srcset="assets/img/casa-rural-salon-960.jpg 960w, assets/img/casa-rural-salon.jpg 1536w" sizes="(max-width: 1023px) 100vw, 384px" width="1536" height="1152" alt="El salón de la casa rural, con vigas de madera y cocina abierta" loading="lazy" decoding="async" data-source="client" data-subject="casa rural"></div>
+        </article>
+        <article class="card card--row span-4">
+          <h3 class="t-card">Alquiler de camper</h3>
+          <p>Camper equipada para recorrer Galicia a tu ritmo.</p>
+          <a class="link" href="#reservar">Preguntar por la camper<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <div class="panel" style="--ratio: 75%"><img class="frame__img" src="assets/img/camper-vista-card.jpg" width="1152" height="864" alt="La vista de la ría desde el portón de la furgoneta camper" loading="lazy" decoding="async" data-source="client" data-subject="camper"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABITACIONES: siete habitaciones, respuesta en filas; foto de detalle de la casa a la derecha -->
+  <section class="section" id="habitaciones" aria-labelledby="habitaciones-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="habitaciones-h">Siete habitaciones con vistas al mar</h2>
+        <p>En el corazón de Galicia, cada habitación pensada para el descanso.</p>
+      </div>
+      <div class="grid grid--top">
+        <ul class="rows span-6">
+          <li><span class="rows__name">Vistas al mar</span><p>La ría de Ferrol al despertar, todas las habitaciones.</p></li>
+          <li><span class="rows__name">Baño privado</span><p>Bañera o ducha, amenities y wifi de alta velocidad.</p></li>
+          <li><span class="rows__name">Habitación doble</span><p>Todas al valle y al jardín interior.</p><span class="rows__value">desde <span data-assumed>90&nbsp;€</span> la noche</span></li>
+          <li><span class="rows__name">Desayuno de la casa</span><p>Cada mañana, en el comedor.</p><span class="rows__value" data-assumed>incluido</span></li>
+        </ul>
+        <figure class="pl-photo span-3 start-7" style="--pl-r: 1">
+          <img src="assets/img/photo-m61777177-960-sq.jpg" width="623" height="623" alt="Mantas de lana dobladas sobre una mesa de madera" loading="lazy" decoding="async" data-source="library-057" data-subject="detalle">
+        </figure>
+        <figure class="pl-photo span-3 start-10" style="--pl-r: 1">
+          <img src="assets/img/photo-f99550429-960-sq.jpg" width="640" height="640" alt="Una habitación con cobija tejida al calor de la lámpara" loading="lazy" decoding="async" data-source="stand-in" data-subject="habitacion">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA MESA: la carta de mercado, filas con la foto del desayuno al lado (pl-photo) -->
+  <section class="section" id="mesa" aria-labelledby="mesa-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="mesa-h">Cocina de mercado</h2>
+        <p>La carta se escribe cada mañana con lo que llega. Entrantes, carnes selectas, mariscos y pescados.</p>
+      </div>
+      <div class="grid">
+        <div class="span-6">
+          <ul class="rows">
+            <li><span class="rows__name">La carta de mercado</span><p>Entrantes, carnes selectas, mariscos y pescados.</p></li>
+            <li><span class="rows__name">Cocina abierta</span><p>Del desayuno a la cena; el lunes descansa.</p></li>
+            <li><span class="rows__name">El producto</span><p>Ingredientes de temporada, de productores locales.</p></li>
+          </ul>
+          <a class="btn btn--secondary" href="#reservar">Pedir mesa<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+        </div>
+        <figure class="pl-photo pl-photo--end span-6 start-7" style="--pl-r: 1.33">
+          <img src="assets/img/photo-m61665613-960-43.jpg" width="960" height="720" alt="Fruta, granola y leche fresca al lado de la ventana" decoding="async" data-source="library-057" data-subject="desayuno">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER.CLOSING: reserva en fila 1 (en lugar del close), dirección y horario en fila 2 (footer-visit) -->
+<footer class="footer closing" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta" id="reservar" aria-labelledby="close-h">
+      <div class="grid">
+        <div class="span-6">
+          <div class="section-head">
+            <h2 id="close-h">Reservar</h2>
+            <p>Dinos las fechas y el número de personas; te respondemos a la mayor brevedad.</p>
+          </div>
+        </div>
+        <form class="form span-6 start-7" action="mailto:fincadosmares@gmail.com" method="post" enctype="text/plain" data-endpoint="" data-sent="" novalidate>
+        <div class="field"><label for="f-name">Tu nombre</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+          <p class="field__error" id="f-name-err" hidden>Escribe el nombre de quien reserva.</p></div>
+        <div class="field"><label for="f-email">Tu correo electrónico</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">
+          <p class="field__error" id="f-email-err" hidden>Escribe una dirección con una arroba, como nombre@ejemplo.com.</p></div>
+        <div class="field"><label for="f-arrival">Llegada</label>
+          <input id="f-arrival" name="arrival" type="text" autocomplete="off" required aria-describedby="f-arrival-err">
+          <p class="field__error" id="f-arrival-err" hidden>Escribe el día que llegas a la finca.</p></div>
+        <div class="field"><label for="f-departure">Salida</label>
+          <input id="f-departure" name="departure" type="text" autocomplete="off" required aria-describedby="f-departure-err">
+          <p class="field__error" id="f-departure-err" hidden>Escribe el día que te marchas.</p></div>
+        <div class="field"><label for="f-guests">Huéspedes</label>
+          <input id="f-guests" name="guests" type="text" inputmode="numeric" autocomplete="off" required aria-describedby="f-guests-err">
+          <p class="field__error" id="f-guests-err" hidden>Escribe cuántas personas, en número.</p></div>
+        <div class="btn-row"><button class="btn btn--primary" type="submit">Reservar</button></div>
+        <p class="form__status" role="status" data-form-status></p>
+      </form>
+      </div>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-6 stack-4">
+          <address class="footer__address">Ferrol, A Coruña</address>
+        </div>
+        <div class="span-6 start-7 stack-4">
+          <h3>Horario</h3>
+          <dl class="hours" data-tz="Europe/Madrid">
+            <dt data-days="tue-sun">Martes a domingo</dt><dd>Del desayuno a la cena</dd>
+            <dt data-days="mon">Lunes</dt><dd>Cerrado</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Finca dos Mares &nbsp; <a href="privacy.html">Privacidad</a> &nbsp; <a href="terms.html">Términos</a></span>
+        <a class="credits" href="credits.html">Fotografías vía Wikimedia Commons</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- BARRA DE ACCIÓN móvil: reservar, como acción de la finca -->
+<nav class="actionbar" aria-label="Acciones rápidas">
+  <a class="btn btn--primary" href="#reservar">Reservar</a>
+</nav>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+</body>
+</html>
