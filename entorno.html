@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Entorno · Cabo Prior y playas de Ferrol · Finca dos Mares</title>
+  <meta name="description" content="Descubre el entorno natural de Finca dos Mares en Cabo Prior (Covas, Ferrol): acantilados, faro de Cabo Prior y las playas salvajes de Santa Comba, Ponzos y Doniños.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Entorno · Cabo Prior y playas de Ferrol · Finca dos Mares">
+  <meta property="og:description" content="La finca, el faro de Cabo Prior y las mejores playas de la costa de Ferrol.">
+  <meta property="og:image" content="share.jpg">
+  <meta name="theme-color" content="#f6f3ee">
+  <link rel="icon" href="assets/img/isotipo_finca_dos_mares.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face{
+      font-family:"Branch";
+      font-style:normal;
+      font-weight:400;
+      font-display:swap;
+      src:url("assets/fonts/Branch.otf") format("opentype"),
+          url("assets/fonts/Branch.ttf") format("truetype"),
+          url("http://127.0.0.1:8765/assets/fonts/Branch.otf") format("opentype"),
+          url("http://127.0.0.1:8765/assets/fonts/Branch.ttf") format("truetype");
+    }
+    :root{
+      --marineiro:#5E7185;
+      --maraxe:#A9BCD0;
+      --arnela:#D1C3A9;
+      --bg:#f6f3ee; --paper:#fbf9f6; --ink:#26292c; --muted:#636b73;
+      --line:color-mix(in srgb, var(--arnela) 55%, #ede8df);
+      --accent:var(--marineiro); --max:1180px; --pad:clamp(20px,4vw,56px);
+      --serif:"Branch", Georgia, serif; --sans:"Kumbh Sans", system-ui, sans-serif;
+      --ease:cubic-bezier(.2,.7,0,1);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; background:var(--bg); color:var(--ink); font:300 17px/1.68 var(--sans); -webkit-font-smoothing:antialiased}
+    h1,h2,h3,.visit-Title,.footer-brand-title{font-feature-settings:"liga" 1,"dlig" 1,"calt" 1; font-variant-ligatures:common-ligatures discretionary-ligatures contextual}
+    strong{font-weight:500}
+    img{max-width:100%; display:block}
+    a{color:inherit; text-decoration:none}
+    .wrap{width:min(var(--max), calc(100% - 2*var(--pad))); margin:0 auto}
+    .serif{font-family:var(--serif); font-weight:400; letter-spacing:0}
+    .eyebrow{display:inline-flex; align-items:center; gap:10px; font:500 11.5px/1 var(--sans); letter-spacing:.18em; text-transform:uppercase; color:var(--marineiro)}
+    .eyebrow::before{content:""; width:18px; height:1px; background:var(--arnela); display:inline-block}
+    .muted{color:var(--muted)}
+    /* nav */
+    .nav{position:fixed; top:0; left:0; right:0; z-index:50; padding:18px 0; transition:background .4s var(--ease), border-color .4s var(--ease), color .4s var(--ease); color:#fff; border-bottom:1px solid transparent}
+    .nav.is-solid{background:rgba(246,243,238,.92); backdrop-filter:saturate(120%) blur(10px); color:var(--marineiro); border-color:var(--line)}
+    .nav .wrap{display:flex; align-items:center; justify-content:space-between; gap:20px}
+    .brand{display:inline-flex; align-items:center; gap:12px; font:500 13px/1 var(--sans); letter-spacing:.12em; text-transform:uppercase; cursor:pointer}
+    .brand img{width:34px; height:34px; object-fit:contain; filter:brightness(0) invert(1); transition:filter .4s, transform .25s var(--ease)}
+    .brand:hover img{transform:translateY(-1px)}
+    .nav.is-solid .brand img{filter:none}
+    .navlinks{display:flex; gap:22px; align-items:center; font:500 12px/1 var(--sans); letter-spacing:.08em; text-transform:uppercase}
+    .navlinks a{opacity:.9} .navlinks a:hover,.navlinks a.is-active{opacity:1}
+    .navlinks a.is-active{text-decoration:underline; text-underline-offset:6px; text-decoration-color:var(--arnela)}
+    .btn{display:inline-flex; align-items:center; justify-content:center; padding:11px 18px; border:1px solid currentColor; font:500 12px/1 var(--sans); letter-spacing:.1em; text-transform:uppercase; transition:background .25s, color .25s, border-color .25s}
+    .btn:hover{background:#fff; color:var(--marineiro); border-color:#fff}
+    .nav.is-solid .btn{border-color:var(--marineiro); color:var(--marineiro)}
+    .nav.is-solid .btn:hover{background:var(--marineiro); color:#fff; border-color:var(--marineiro)}
+    @media (max-width:860px){ .navlinks .hide-m{display:none} }
+    /* hero */
+    .hero{position:relative; min-height:84svh; display:grid; align-items:end; color:#fff; overflow:clip}
+    .hero .eyebrow{color:rgba(255,255,255,.88)}
+    .hero .eyebrow::before{background:var(--arnela)}
+    .hero-media{position:absolute; inset:0}
+    .hero-media img{width:100%; height:100%; object-fit:cover; object-position:center 50%; transform:scale(1.04); transition:transform 1.8s var(--ease)}
+    .hero.in .hero-media img{transform:scale(1)}
+    .hero::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(28,36,44,.62), rgba(28,36,44,.16) 45%, rgba(28,36,44,.24))}
+    .hero-content{position:relative; padding:calc(88px + 6vh) 0 var(--pad)}
+    .hero h1{font:400 clamp(38px,5.4vw,74px)/1.05 var(--serif); margin:14px 0 18px; max-width:13ch; color:#fff}
+    .hero p{max-width:54ch; font:300 18px/1.65 var(--sans); margin:0 0 26px; color:rgba(255,255,255,.92)}
+    .hero .meta{display:flex; gap:18px; flex-wrap:wrap; font:500 11px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--arnela)}
+    .hero .meta a{padding-bottom:3px; border-bottom:1px solid rgba(209,195,169,.5)}
+    /* sections */
+    section.block{padding:clamp(72px,10vw,128px) 0}
+    .intro{background:color-mix(in srgb, var(--maraxe) 18%, var(--paper)); border-top:1px solid color-mix(in srgb, var(--maraxe) 45%, var(--line)); border-bottom:1px solid color-mix(in srgb, var(--maraxe) 45%, var(--line))}
+    .intro-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(28px,5vw,72px); align-items:end}
+    .intro h2{font:400 clamp(30px,3.8vw,50px)/1.12 var(--serif); margin:12px 0 0; color:var(--marineiro)}
+    .intro p{margin:0; font:300 17.5px/1.7 var(--sans)}
+    @media (max-width:860px){ .intro-grid{grid-template-columns:1fr} }
+    /* feature rows */
+    .feature{display:grid; grid-template-columns:1fr 1fr; align-items:stretch}
+    .feature.flip .feature-media{order:2}
+    .feature-media{position:relative; overflow:hidden; height:clamp(360px,52vh,520px)}
+    .feature-media img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 55%; transform:scale(1.06); transition:transform 1.4s var(--ease)}
+    .feature.in .feature-media img{transform:scale(1)}
+    .feature-body{display:flex; align-items:center; padding:clamp(28px,5vw,68px); background:var(--bg)}
+    .feature.flip .feature-body{background:color-mix(in srgb, var(--maraxe) 14%, var(--paper))}
+    .feature h3{font:400 clamp(28px,3.3vw,44px)/1.12 var(--serif); margin:12px 0 14px; color:var(--marineiro)}
+    .feature p{margin:0 0 14px; max-width:46ch}
+    .feature .facts{list-style:none; padding:0; margin:18px 0 0; display:grid; gap:8px; color:var(--muted); font:400 15px/1.55 var(--sans)}
+    .feature .facts li{padding-top:8px; border-top:1px solid var(--arnela); display:flex; align-items:center; gap:10px}
+    .feature .facts li::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--maraxe); flex:0 0 auto}
+    @media (max-width:860px){ .feature,.feature.flip{grid-template-columns:1fr} .feature.flip .feature-media{order:0} .feature-media{height:340px} }
+    /* beaches & places grid */
+    .section-head{display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:end; margin-bottom:clamp(28px,4vw,48px)}
+    .section-head h2{font:400 clamp(30px,3.8vw,50px)/1.1 var(--serif); margin:10px 0 0; color:var(--marineiro)}
+    .section-head p{margin:0}
+    @media (max-width:860px){ .section-head{grid-template-columns:1fr} }
+    .places-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px}
+    .place-card{background:var(--paper); border:1px solid var(--arnela); border-top:3px solid var(--maraxe); padding:28px 30px; display:flex; flex-direction:column; justify-content:space-between}
+    .place-tag{font:500 11px/1 var(--sans); letter-spacing:.18em; text-transform:uppercase; color:var(--maraxe); margin-bottom:10px}
+    .place-card h3{font:400 28px/1.12 var(--serif); margin:0 0 10px; color:var(--marineiro)}
+    .place-card p{margin:0; color:var(--muted); font:300 15.5px/1.64 var(--sans)}
+    @media (max-width:860px){ .places-grid{grid-template-columns:1fr} }
+    /* routes / highlights */
+    .routes-section{background:var(--paper); border-top:1px solid var(--line)}
+    .routes-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px}
+    .route-card{background:var(--bg); border:1px solid var(--arnela); padding:26px 26px 28px}
+    .route-card h3{font:400 25px/1.15 var(--serif); margin:10px 0 10px; color:var(--marineiro)}
+    .route-card p{margin:0; color:var(--muted); font:300 15px/1.62 var(--sans)}
+    @media (max-width:860px){ .routes-grid{grid-template-columns:1fr} }
+    /* visit / reserve */
+    .visit-split{display:grid; grid-template-columns:1fr 1.15fr; gap:clamp(32px,5vw,72px); align-items:center}
+    .visit-Title{font:400 clamp(34px,4.2vw,54px)/1.08 var(--serif); margin:0 0 14px; color:var(--marineiro)}
+    .visit-sub{color:var(--muted); font:300 17px/1.6 var(--sans); margin:0 0 36px; max-width:44ch}
+    .visit-list{display:grid; gap:28px}
+    .visit-item{display:grid; grid-template-columns:48px 1fr; gap:18px; align-items:start}
+    .visit-icon{width:48px; height:48px; border-radius:50%; background:color-mix(in srgb, var(--maraxe) 20%, #fff); border:1px solid var(--maraxe); display:grid; place-items:center; color:var(--marineiro); box-shadow:0 2px 8px rgba(94,113,133,.08)}
+    .visit-icon svg{width:20px; height:20px; stroke:currentColor; fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round}
+    .visit-item h3{font:400 24px/1.2 var(--serif); margin:0 0 6px; color:var(--marineiro)}
+    .visit-item p{margin:0; color:var(--muted); font:300 15.5px/1.58 var(--sans)}
+    .visit-item a:hover{color:var(--marineiro); text-decoration:underline; text-underline-offset:3px}
+    .visit-map{width:100%; aspect-ratio:4/3; min-height:380px; background:#eae5dc; border:1px solid var(--arnela); overflow:hidden; box-shadow:0 12px 32px rgba(94,113,133,.1)}
+    .visit-map iframe{width:100%; height:100%; border:0; display:block}
+    @media (max-width:860px){ .visit-split{grid-template-columns:1fr} .visit-map{min-height:320px} }
+    /* footer */
+    footer{padding:56px 0 44px; border-top:1px solid var(--arnela); background:color-mix(in srgb, var(--arnela) 18%, var(--paper)); color:var(--muted); font:300 14.5px/1.6 var(--sans)}
+    .footer-top{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:clamp(24px,4vw,48px); align-items:start; padding-bottom:36px; border-bottom:1px solid var(--arnela)}
+    .footer-brand{display:inline-flex; align-items:center; gap:14px; color:var(--marineiro); text-decoration:none !important}
+    .footer-brand img{width:44px; height:44px; object-fit:contain; transition:transform .25s var(--ease)}
+    .footer-brand:hover img{transform:translateY(-1px)}
+    .footer-brand-title{font:400 22px/1.1 var(--serif); color:var(--marineiro); display:block}
+    .footer-brand-sub{font:400 13px/1.4 var(--sans); color:var(--muted); display:block; margin-top:3px}
+    .footer-col h4{font:600 11px/1 var(--sans); letter-spacing:.16em; text-transform:uppercase; color:var(--marineiro); margin:0 0 10px}
+    .footer-col p{margin:0; line-height:1.65; color:var(--muted)}
+    .footer-col a{text-decoration:none}
+    .footer-col a:hover{color:var(--marineiro); text-decoration:underline; text-underline-offset:3px}
+    .footer-bottom{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-top:24px; font-size:13.5px}
+    .footer-bottom a{text-decoration:underline; text-underline-offset:3px}
+    @media (max-width:860px){ .footer-top{grid-template-columns:1fr} }
+    /* reveal */
+    .reveal{opacity:0; transform:translateY(22px); transition:opacity .8s var(--ease), transform .8s var(--ease)}
+    .reveal.in{opacity:1; transform:none}
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto} .reveal{opacity:1; transform:none; transition:none}
+      .hero-media img,.feature-media img{transform:none !important; transition:none}
+    }
+
+    /* === RESPONSIVE & MOBILE NAV === */
+    html, body { overflow-x: clip; }
+    .intro-grid > *, .feature > *, .section-head > *, .cards > *, .pair-media > *, .rooms-grid > *, .amenities > *, .camper-hero > *, .pillars > *, .menu-grid > *, .places-grid > *, .routes-grid > *, .direct-cards > *, .contact-main > *, .visit-split > *, .footer-top > * { min-width: 0; }
+    .visit-item p, .footer-col p, .direct-card p { overflow-wrap: anywhere; }
+    .nav-toggle {
+      display: none;
+      width: 38px;
+      height: 38px;
+      border: 1px solid currentColor;
+      background: transparent;
+      color: inherit;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      cursor: pointer;
+    }
+    .nav-toggle svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 1.7; fill: none; stroke-linecap: round; }
+    @media (max-width: 780px) {
+      .nav .wrap { position: relative; }
+      .nav-toggle { display: inline-flex; }
+      .navlinks {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 0;
+        right: 0;
+        background: rgba(251, 249, 246, 0.98);
+        backdrop-filter: saturate(130%) blur(12px);
+        border: 1px solid var(--arnela);
+        box-shadow: 0 16px 36px rgba(38, 41, 44, 0.12);
+        padding: 18px 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        color: var(--marineiro);
+        display: none;
+      }
+      .nav.menu-open .navlinks { display: flex; }
+      .navlinks .hide-m { display: block !important; padding: 6px 0; border-bottom: 1px solid color-mix(in srgb, var(--arnela) 45%, transparent); }
+      .navlinks .btn {
+        width: 100%;
+        text-align: center;
+        border-color: var(--marineiro);
+        background: var(--marineiro);
+        color: #fff;
+        margin-top: 4px;
+      }
+    }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .brand { gap: 9px; font-size: 11.5px; letter-spacing: .09em; }
+      .brand img { width: 29px; height: 29px; }
+      .hero { min-height: 82svh; }
+      .hero-content { padding: calc(76px + 4vh) 0 34px; }
+      .hero h1 { font-size: clamp(31px, 8.8vw, 44px); line-height: 1.08; }
+      .hero p { font-size: 16px; margin-bottom: 20px; }
+      section.block { padding: 56px 0; }
+      .feature-media { height: 290px !important; }
+      .feature-body { padding: 32px 20px; }
+      .card-media, .pair-frame, .camper-media { height: clamp(230px, 62vw, 300px); }
+      .card-body, .room-card, .place-card, .route-card, .direct-card, .pillar { padding: 20px; }
+      .amenities, .special-box, .form-box { padding: 22px 18px; }
+      .btn-primary, .btn-submit, .quick-actions a { width: 100%; justify-content: center; text-align: center; }
+      .hours-strip { gap: 18px; flex-direction: column; align-items: flex-start; }
+      .menu-row { flex-wrap: wrap; gap: 6px 12px; }
+      .visit-item { grid-template-columns: 42px 1fr; gap: 14px; }
+      .visit-icon { width: 42px; height: 42px; }
+      .visit-map, .map-box, .map-box iframe { min-height: 270px; aspect-ratio: 4/3; }
+      footer { padding: 42px 0 34px; }
+      .footer-top { gap: 22px; padding-bottom: 26px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+    }
+
+    /* Selector de idioma ES | EN */
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font: 500 11px/1 var(--sans);
+      letter-spacing: .1em;
+      border: 1px solid currentColor;
+      padding: 4px 6px;
+    }
+    .lang-switch button {
+      background: transparent;
+      border: 0;
+      color: inherit;
+      font: inherit;
+      letter-spacing: inherit;
+      padding: 4px 6px;
+      cursor: pointer;
+      opacity: .6;
+      transition: opacity .2s, background .2s, color .2s;
+    }
+    .lang-switch button:hover { opacity: .95; }
+    .lang-switch button.is-active {
+      opacity: 1;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-color: var(--arnela);
+    }
+    .lang-sep { opacity: .35; user-select: none; }
+    @media (max-width: 780px) {
+      .lang-switch { align-self: flex-start; border-color: var(--arnela); color: var(--marineiro); margin-top: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Ir al inicio de Finca dos Mares">
+        <img class="brand-logo" src="assets/img/isotipo_finca_dos_mares.png" alt="Logo Finca dos Mares">
+        <span>Finca dos Mares</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="navlinks" aria-label="Principal">
+        <a class="hide-m" href="estancias.html">Estancias</a>
+        <a class="hide-m" href="restaurante.html">Restaurante</a>
+        <a class="hide-m is-active" href="entorno.html">Entorno</a>
+        <a class="btn" href="contacto.html">Reservar</a>
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button type="button" class="is-active" data-lang-btn="es" aria-pressed="true">ES</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero watch">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/img/santa_comba.jpg" alt="Playa e isla de Santa Comba en Cabo Prior, Ferrol" fetchpriority="high">
+      </div>
+      <div class="wrap hero-content">
+        <div class="eyebrow">Entorno · Cabo Prior, Ferrol</div>
+        <h1>Entre acantilados, faros y playas salvajes</h1>
+        <p>Finca dos Mares se asienta en Prioiro (Covas), en uno de los tramos más indómitos y hermosos de la costa atlántica gallega, donde el monte y el océano se encuentran.</p>
+        <div class="meta">
+          <a href="#finca">La Finca</a>
+          <a href="#playas">Playas cercanas</a>
+          <a href="#rutas">Qué descubrir</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro block">
+      <div class="wrap intro-grid reveal watch">
+        <div>
+          <div class="eyebrow">Costa Ártabra</div>
+          <h2>Un territorio en estado puro a pocos minutos de tu habitación.</h2>
+        </div>
+        <p class="muted">Aquí los días los marca la marea: mañanas de paseo entre senderos costeros hacia el faro de Cabo Prior, tardes de sol y brisa en los arenales infinitos de Covas y atardeceres inolvidables viendo caer el sol sobre el Atlántico.</p>
+      </div>
+    </section>
+
+    <section class="feature watch" id="finca">
+      <div class="feature-media">
+        <img src="assets/img/finca.jpg" alt="Sendero de piedra y vegetación en Finca dos Mares">
+      </div>
+      <div class="feature-body">
+        <div class="reveal watch">
+          <div class="eyebrow">Nuestra propiedad</div>
+          <h3>La calma de la finca frente al océano</h3>
+          <p>Rodeada de naturaleza atlántica y abierta a las vistas del mar de Covas, la finca ofrece más de 5.000 m² pensados para respirar hondo, leer al sol en la terraza o disfrutar de una sobremesa tranquila tras volver de la playa.</p>
+          <ul class="facts">
+            <li>Enclave privilegiado en Prioiro Núcleo (Covas, Ferrol)</li>
+            <li>Terrazas y rincones exteriores abiertos al paisaje costero</li>
+            <li>Punto de partida ideal para recorrer toda la comarca de Ferrolterra</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="playas">
+      <div class="wrap">
+        <div class="section-head reveal watch">
+          <div>
+            <div class="eyebrow">El Atlántico de cerca</div>
+            <h2>Las playas que nos rodean</h2>
+          </div>
+          <p class="muted">Arenales vírgenes de agua cristalina, dunas protegidas y calas escondidas a pocos minutos de Finca dos Mares.</p>
+        </div>
+
+        <div class="places-grid">
+          <article class="place-card reveal watch">
+            <div>
+              <div class="place-tag">A los pies de Cabo Prior</div>
+              <h3>Playa de Santa Comba</h3>
+              <p>Uno de los lugares más mágicos de Galicia: un gran arenal de arena blanca presidido por la pequeña ermita románica de Santa Comba sobre una isla a la que solo se puede cruzar a pie cuando baja la marea.</p>
+            </div>
+          </article>
+
+          <article class="place-card reveal watch">
+            <div>
+              <div class="place-tag">Naturaleza virgen</div>
+              <h3>Playa de Ponzos</h3>
+              <p>Amplia, salvaje y abierta al océano. Rodeada de dunas y acantilados, es perfecta para largos paseos junto a la orilla y para contemplar la fuerza del mar del norte en cualquier época del año.</p>
+            </div>
+          </article>
+
+          <article class="place-card reveal watch">
+            <div>
+              <div class="place-tag">En el corazón de Covas</div>
+              <h3>Fragata y Esmelle</h3>
+              <p>El arenal vecino de Covas y Esmelle combina zonas resguardadas para el baño con olas muy apreciadas por los amantes del surf, rodeado de senderos litorales que conectan toda la bahía.</p>
+            </div>
+          </article>
+
+          <article class="place-card reveal watch">
+            <div>
+              <div class="place-tag">Dunas y laguna costera</div>
+              <h3>Doniños y San Xurxo</h3>
+              <p>Dos playas emblemáticas de Ferrol conectadas por un paisaje de dunas, pinares y la laguna de Doniños. Un escenario imprescindible para despedir el día viendo la puesta de sol sobre el mar.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature flip watch">
+      <div class="feature-media">
+        <img src="assets/img/cabo_prior.jpg" alt="Faro de Cabo Prior en la costa de Ferrol">
+      </div>
+      <div class="feature-body">
+        <div class="reveal watch">
+          <div class="eyebrow">El horizonte</div>
+          <h3>El Faro de Cabo Prior</h3>
+          <p>A escasos minutos de la finca se alza el cabo que da carácter a toda esta costa. Sus acantilados cortados sobre el océano, sus antiguos puestos de observación y su faro ofrecen una de las panorámicas más sobrecogedoras del norte gallego.</p>
+          <ul class="facts">
+            <li>Miradores naturales sobre el Golfo Ártabro y el océano abierto</li>
+            <li>Rutas a pie desde Covas entre brezos y acantilados</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block routes-section" id="rutas">
+      <div class="wrap">
+        <div class="section-head reveal watch">
+          <div>
+            <div class="eyebrow">Descubre Ferrolterra</div>
+            <h2>Rutas, cultura y mar</h2>
+          </div>
+          <p class="muted">Más allá de las playas de Covas, el entorno invita a explorar villas marineras, patrimonio histórico y senderos naturales.</p>
+        </div>
+
+        <div class="routes-grid">
+          <article class="route-card reveal watch">
+            <div class="eyebrow">01 · Patrimonio</div>
+            <h3>Ferrol Ilustrado y Canido</h3>
+            <p>A pocos minutos en coche te esperan el trazado racionalista del barrio de A Magdalena, el histórico Arsenal Militar y el colorista barrio de Canido con sus célebres Meninas.</p>
+          </article>
+
+          <article class="route-card reveal watch">
+            <div class="eyebrow">02 · Naturaleza</div>
+            <h3>Senda Ártabra y castillos</h3>
+            <p>Recorre la entrada de la ría de Ferrol entre el Castillo de San Felipe y la costa de Brión, o sigue los caminos litorales hacia Valdoviño, Pantín y el faro de Meirás.</p>
+          </article>
+
+          <article class="route-card reveal watch">
+            <div class="eyebrow">03 · Deporte y mar</div>
+            <h3>Surf, senderismo y calas</h3>
+            <p>Desde bautismos de surf en las playas de Ferrol y Pantín hasta rutas de senderismo y ciclismo frente al Atlántico, con la tranquilidad de regresar después a descansar a la finca.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="visita" style="background:var(--bg); border-top:1px solid var(--line)">
+      <div class="wrap">
+        <div class="visit-split">
+          <div class="reveal watch">
+            <h2 class="visit-Title">Encuéntranos en Cabo Prior</h2>
+            <p class="visit-sub">Un rincón creado para la calma, el descanso y la buena mesa junto al Atlántico.</p>
+            <div class="visit-list">
+              <div class="visit-item">
+                <div class="visit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                </div>
+                <div>
+                  <h3>Nuestra Finca</h3>
+                  <p>Prioiro Núcleo, DP-3603<br>15594 Covas, Ferrol (A Coruña)</p>
+                </div>
+              </div>
+              <div class="visit-item">
+                <div class="visit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </div>
+                <div>
+                  <h3>Horario de Atención</h3>
+                  <p>Restaurante: del desayuno a la cena<br>Lunes: Cerrado por descanso</p>
+                </div>
+              </div>
+              <div class="visit-item">
+                <div class="visit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.63 2.62a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.46-1.2a2 2 0 0 1 2.11-.45c.84.3 1.72.51 2.62.63A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h3>Contacto</h3>
+                  <p><a href="tel:+34610866150">+34 610 86 61 50</a> · <a href="tel:+34672232628">+34 672 23 26 28</a><br>
+                  <a href="mailto:fincadosmares@gmail.com?subject=Reserva%20o%20consulta%20%C2%B7%20Finca%20dos%20Mares&amp;body=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20consulta%20en%20Finca%20dos%20Mares%3A%0A%0A">fincadosmares@gmail.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="visit-map reveal watch">
+            <iframe
+              title="Ubicación de Finca dos Mares en Google Maps"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Finca%20dos%20Mares%2C%20Prioiro%20N%C3%BAcleo%2C%20DP-3603%2C%2015594%20Covas%2C%20A%20Coru%C3%B1a&t=&z=15&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-top">
+      <a class="footer-brand" href="index.html" aria-label="Volver a la página de inicio">
+        <img class="brand-logo" src="assets/img/isotipo_finca_dos_mares.png" alt="Logo Finca dos Mares">
+        <div>
+          <span class="footer-brand-title">Finca dos Mares</span>
+          <span class="footer-brand-sub">Hotel boutique y restaurante · Cabo Prior</span>
+        </div>
+      </a>
+      <div class="footer-col">
+        <h4>Dirección</h4>
+        <p>Prioiro Núcleo, DP-3603<br>15594 Covas, Ferrol (A Coruña)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p><a href="tel:+34610866150">+34 610 86 61 50</a> · <a href="tel:+34672232628">+34 672 23 26 28</a><br>
+        <a href="mailto:fincadosmares@gmail.com?subject=Reserva%20o%20consulta%20%C2%B7%20Finca%20dos%20Mares&amp;body=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20consulta%20en%20Finca%20dos%20Mares%3A%0A%0A">fincadosmares@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <div>© 2026 Finca dos Mares · Cabo Prior, Ferrol</div>
+      <div><a href="aviso-legal.html">Aviso Legal</a> · <a href="privacy.html">Privacidad</a> · <a href="terms.html">Términos</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Menú desplegable en móvil
+    const navEl = document.getElementById('nav');
+    const navToggle = document.querySelector('.nav-toggle');
+    if (navEl && navToggle) {
+      navToggle.addEventListener('click', () => {
+        const open = navEl.classList.toggle('menu-open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      navEl.querySelectorAll('.navlinks a').forEach(a => {
+        a.addEventListener('click', () => {
+          navEl.classList.remove('menu-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+    document.querySelectorAll('img[src^="assets/"]').forEach(img=>{
+      const rel = img.getAttribute('src');
+      const fallback = ()=>{
+        if (!img.src.startsWith('http://127.0.0.1:8765/')) img.src = 'http://127.0.0.1:8765/' + rel;
+      };
+      img.addEventListener('error', fallback, {once:true});
+      if (img.complete && img.naturalWidth === 0) fallback();
+    });
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('is-solid', window.scrollY > 40);
+    onScroll(); addEventListener('scroll', onScroll, {passive:true});
+    const io = ('IntersectionObserver' in window) ? new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold: 0.12}) : null;
+    document.querySelectorAll('.watch, .reveal').forEach(el=>{
+      if(io) io.observe(el); else el.classList.add('in');
+    });
+  </script>
+  <script src="assets/i18n.js" onerror="var s=document.createElement('script');s.src='http://127.0.0.1:8765/assets/i18n.js';document.body.appendChild(s)"></script>
+</body>
+</html>

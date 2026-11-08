@@ -1,58 +1,51 @@
 # Finca dos Mares — Web oficial
 
-Web estática de **Finca dos Mares**, hotel boutique y casa rural con restaurante en la costa atlántica de Ferrol (A Coruña, Galicia). Sustituye a la antigua web WordPress (fincadosmares.com).
+Web oficial de **Finca dos Mares**, hotel boutique, restaurante de cocina de mercado y alquiler de furgoneta camper en el entorno natural de **Cabo Prior (Covas, Ferrol, A Coruña)**.
 
-## Sobre el negocio
+## Sobre Finca dos Mares
 
-Finca dos Mares es un multinegocio familiar en Ferrol:
-
-- **Hotel Boutique** — 7 habitaciones individuales, todas con vistas al mar
-- **Cocina de Mercado** — restaurante de producto local (KM 0), cocina abierta y brasa
-- **Casa Rural** — casa completa disponible por temporadas
-- **Alquiler de Camper** — furgoneta camper de alquiler para explorar Galicia
-- **Eventos** — celebraciones privadas y eventos corporativos
+- **Hotel Boutique** — 7 habitaciones únicas inspiradas en los estados del mar (*Mar Llana, Marejada, Fuerte Marejada, Mar Gruesa, Mar Muy Gruesa, Mar Arbolada y Media Vaga*), cada una con su propia personalidad y esencia.
+- **Restaurante · Cocina de Mercado** — producto fresco de lonja, carnes selectas, pescados y mariscos de la ría. Abierto de martes a domingo, del desayuno a la cena (lunes cerrado por descanso).
+- **Alquiler de Camper** — furgoneta equipada en Ferrol para recorrer la costa atlántica gallega a tu ritmo.
 
 ## Estructura del sitio
 
-| Página | Descripción |
+| Archivo | Descripción |
 |---|---|
-| `index.html` | Portada / Inicio |
-| `hotel-boutique.html` | Habitaciones boutique |
-| `cocina-de-mercado.html` | Restaurante |
-| `carta.html` | Carta con precios |
-| `alquiler-camper.html` | Alquiler de furgoneta camper |
-| `casa-rural.html` | Casa rural completa |
-| `nosotros.html` | Historia y equipo |
-| `eventos.html` | Celebraciones y eventos |
-| `contacto.html` | Contacto, mapa y reservas |
+| `index.html` | Página de inicio (Hero, La experiencia, El descanso, Tu refugio, La mesa, El paisaje, Ubicación y mapa) |
+| `estancias.html` | Hotel Boutique (las 7 habitaciones y comodidades) + Alquiler de Camper |
+| `restaurante.html` | Filosofía gastronómica, espacio/bodega y Carta completa (*Entrantes, Carnes Selectas, Mariscos y Pescados*) |
+| `entorno.html` | La finca, playas cercanas (*Santa Comba, Ponzos, Fragata/Esmelle, Doniños/San Xurxo*), Faro de Cabo Prior y rutas por Ferrolterra |
+| `contacto.html` | Reservas y contacto directo (Teléfono, WhatsApp, Email, formulario de solicitud rápida y mapa interactivo) |
+| `aviso-legal.html` | Aviso Legal conforme a la Ley 34/2002 (LSSI-CE) |
+| `privacy.html` | Política de Privacidad conforme al RGPD (UE) 2016/679 y la LOPDGDD 3/2018 |
+| `terms.html` | Términos y Condiciones de reserva, alojamiento, restaurante y alquiler de camper |
+| `assets/i18n.js` | Selector de idioma integrado **ES (por defecto) | EN (Inglés)** |
+| `assets/fonts/` | Tipografía corporativa `Branch Regular` (`Branch.otf` / `Branch.ttf`) |
+| `assets/img/` | Fotografías optimizadas e isotipo oficial de Finca dos Mares |
 
-## Tecnología
+## Identidad visual
 
-- **HTML5 + CSS3 + JavaScript vanilla** — sin frameworks ni build
-- **Multilingüe**: Español (principal), Galego e Inglés
-- **Galería lightbox** propia, sin dependencias externas
-- Formulario de contacto estático
-- Desplegada en **GitHub Pages**
+- **Paleta corporativa**:
+  - **Azul mariñeiro (`#5E7185`)** — títulos y acento principal
+  - **Azul maraxe (`#A9BCD0`)** — fondos puntuales y detalles sutiles
+  - **Beige arnela (`#D1C3A9`)** — divisores y detalles cálidos
+- **Tipografías**:
+  - **Branch Regular** — títulos cortos y encabezados principales
+  - **Kumbh Sans** (`300`, `400`, `500`, `600`) — subtítulos y cuerpos de texto
 
-## Contacto
+## Datos de contacto y titularidad
 
+- **Titular**: Fernando Ameneiros Paleo (NIF: 32676282K)
+- **Dirección**: Prioiro Núcleo, DP-3603, 15594 Covas, Ferrol (A Coruña)
+- **Teléfonos**: +34 610 86 61 50 · +34 672 23 26 28
 - **Email**: fincadosmares@gmail.com
-- **Teléfono**: +34 610 86 61 50 · +34 672 33 26 28
-- **Dirección**: Prieto Núñez, Ferrol, A Coruña
-
-## Proyecto mantenido por
-
-[Galiciabot](https://www.galiciabot.org) — asociación sin ánimo de lucro que ayuda a pequeñas empresas en su transición al mundo digital.
 
 ## Desarrollo local
 
-Abrir `index.html` en el navegador o servir la carpeta con cualquier servidor estático:
-
 ```bash
-python -m http.server 8000
+python3 -m http.server 8000
 # → http://localhost:8000
 ```
 
-## Licencia
-
-© 2026 Finca dos Mares. Contenido e imágenes de la propiedad. Proyecto web publicada con fines informativos.
+© 2026 Finca dos Mares · Cabo Prior, Ferrol.
