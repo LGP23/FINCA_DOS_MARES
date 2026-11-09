@@ -284,6 +284,8 @@
     }
 
     /* Mejora de legibilidad y contraste en Hero y bandas fotográficas */
+    .hero::after, .band::after { pointer-events: none; z-index: 1; }
+    .hero-content, .band .inner { position: relative; z-index: 2; }
     .hero::after {
       background: linear-gradient(to top, rgba(16, 23, 30, 0.84) 0%, rgba(16, 23, 30, 0.58) 52%, rgba(16, 23, 30, 0.38) 100%) !important;
     }
@@ -345,7 +347,7 @@
         <h1>Donde el paisaje gallego se asoma al Atlántico</h1>
         <p>Un refugio íntimo entre acantilados y mar abierto. Despierta con la brisa salina, alarga la sobremesa en la finca y deja que los días marquen otro ritmo.</p>
         <div class="hero-actions">
-          <a class="btn-hero" href="contacto.html#reserva-rapida">Reservar</a>
+          <a class="btn-hero" href="contacto.html">Reservar</a>
           <div class="meta"><span>Hotel boutique</span><span>Cocina de mercado</span><span>Ruta en camper</span></div>
         </div>
       </div>
@@ -443,7 +445,7 @@
           <h2>Reserva tu próximo descanso frente al Atlántico</h2>
           <p>Consulta disponibilidad en nuestras siete habitaciones del hotel boutique, reserva mesa en el restaurante de cocina de mercado o planea tu escapada en nuestra camper directamente con nosotros.</p>
         </div>
-        <a class="btn-cta" href="contacto.html#reserva-rapida">Reservar</a>
+        <a class="btn-cta" href="contacto.html">Reservar</a>
       </div>
     </section>
 

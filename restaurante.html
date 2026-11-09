@@ -266,6 +266,8 @@
     }
 
     /* Mejora de legibilidad y contraste en Hero y bandas fotográficas */
+    .hero::after, .band::after { pointer-events: none; z-index: 1; }
+    .hero-content, .band .inner { position: relative; z-index: 2; }
     .hero::after {
       background: linear-gradient(to top, rgba(16, 23, 30, 0.84) 0%, rgba(16, 23, 30, 0.58) 52%, rgba(16, 23, 30, 0.38) 100%) !important;
     }
