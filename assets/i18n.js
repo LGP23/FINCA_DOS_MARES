@@ -55,6 +55,9 @@
     "Cruzar la puerta de la finca es adentrarse en uno de los tramos más indómitos de Galicia: el viento en los acantilados de Prior, la arena abierta de Santa Comba y Ponzos, y la luz cambiante del océano a cada hora.": "Stepping outside the estate brings you into one of Galicia’s untamed coastlines: the wind along the cliffs of Prior, the open sands of Santa Comba and Ponzos, and the ever-changing Atlantic light.",
     "A pocos minutos del faro de Cabo Prior y los arenales de Covas": "Just minutes from Cabo Prior lighthouse and the beaches of Covas",
     "Senderos costeros, miradores, olas y naturaleza en estado puro": "Coastal trails, viewpoints, waves and untouched nature",
+    "Estancias, mesa y ruta": "Stays, dining & campervan",
+    "Reserva tu próximo descanso frente al Atlántico": "Book your next escape by the Atlantic",
+    "Consulta disponibilidad en nuestras siete habitaciones del hotel boutique, reserva mesa en el restaurante de cocina de mercado o planea tu escapada en nuestra camper directamente con nosotros.": "Check availability in our seven boutique hotel rooms, book a table at our market-cuisine restaurant, or plan your campervan getaway directly with us.",
 
     // ESTANCIAS (estancias.html)
     "Estancias · Cabo Prior": "Stays · Cabo Prior",

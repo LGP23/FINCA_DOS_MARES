@@ -122,6 +122,19 @@
     .band h2{font:400 clamp(32px,4.2vw,56px)/1.08 var(--serif); margin:12px 0 14px; max-width:13ch; color:#fff}
     .band p{max-width:54ch; margin:0 0 10px; color:rgba(255,255,255,.92); font-weight:300}
     .note{margin-top:18px; padding-top:16px; border-top:1px solid color-mix(in srgb, var(--arnela) 55%, transparent); color:rgba(255,255,255,.9); font:400 15px/1.5 var(--sans)}
+    /* cta banner */
+    .cta-banner{background:var(--marineiro); color:#fff; border-top:1px solid var(--arnela); border-bottom:1px solid var(--arnela); padding:clamp(60px,8vw,104px) 0; position:relative; overflow:hidden}
+    .cta-banner-inner{display:flex; align-items:center; justify-content:space-between; gap:clamp(28px,5vw,64px); flex-wrap:wrap}
+    .cta-banner-copy{max-width:60ch}
+    .cta-banner .eyebrow{color:var(--arnela)}
+    .cta-banner .eyebrow::before{background:var(--maraxe)}
+    .cta-banner h2{font:400 clamp(32px,4.2vw,52px)/1.08 var(--serif); margin:12px 0 12px; color:#fff}
+    .cta-banner p{margin:0; font:300 17px/1.65 var(--sans); color:rgba(255,255,255,.88)}
+    .btn-cta{display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:15px 32px; background:var(--paper); color:var(--marineiro); border:1px solid var(--arnela); font:500 12.5px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; transition:background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease); flex:0 0 auto}
+    .btn-cta::after{content:"→"; transition:transform .25s var(--ease)}
+    .btn-cta:hover{background:var(--arnela); color:var(--ink); transform:translateY(-1px)}
+    .btn-cta:hover::after{transform:translateX(4px)}
+    @media (max-width:560px){ .cta-banner{padding:48px 0} .btn-cta{width:100%} }
     /* visit / reserve (layout con mapa estilo editorial) */
     .visit-split{display:grid; grid-template-columns:1fr 1.15fr; gap:clamp(32px,5vw,72px); align-items:center}
     .visit-Title{font:400 clamp(34px,4.2vw,54px)/1.08 var(--serif); margin:0 0 14px; color:var(--marineiro)}
@@ -385,6 +398,17 @@
             <li>Senderos costeros, miradores, olas y naturaleza en estado puro</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" aria-label="Reservar en Finca dos Mares">
+      <div class="wrap cta-banner-inner reveal watch">
+        <div class="cta-banner-copy">
+          <div class="eyebrow">Estancias, mesa y ruta</div>
+          <h2>Reserva tu próximo descanso frente al Atlántico</h2>
+          <p>Consulta disponibilidad en nuestras siete habitaciones del hotel boutique, reserva mesa en el restaurante de cocina de mercado o planea tu escapada en nuestra camper directamente con nosotros.</p>
+        </div>
+        <a class="btn-cta" href="contacto.html#reserva-rapida">Reservar</a>
       </div>
     </section>
 
