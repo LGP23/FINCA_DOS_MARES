@@ -73,7 +73,12 @@
     .hero::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(28,36,44,.58), rgba(28,36,44,.14) 45%, rgba(28,36,44,.22))}
     .hero-content{position:relative; padding:calc(88px + 6vh) 0 var(--pad)}
     .hero h1{font:400 clamp(38px,5.6vw,76px)/1.05 var(--serif); margin:14px 0 18px; max-width:12ch; color:#fff}
-    .hero p{max-width:52ch; font:300 18px/1.65 var(--sans); margin:0 0 26px; color:rgba(255,255,255,.92)}
+    .hero p{max-width:52ch; font:300 18px/1.65 var(--sans); margin:0 0 24px; color:rgba(255,255,255,.92)}
+    .hero-actions{display:flex; align-items:center; gap:24px; flex-wrap:wrap}
+    .btn-hero{display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:14px 28px; background:var(--paper); color:var(--marineiro); border:1px solid var(--arnela); font:500 12px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; transition:background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease)}
+    .btn-hero::after{content:"→"; transition:transform .25s var(--ease)}
+    .btn-hero:hover{background:var(--arnela); color:var(--ink); transform:translateY(-1px)}
+    .btn-hero:hover::after{transform:translateX(4px)}
     .hero .meta{display:flex; gap:18px; flex-wrap:wrap; font:500 11px/1 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--arnela)}
     /* sections */
     section.block{padding:clamp(72px,12vw,140px) 0}
@@ -312,7 +317,10 @@
         <div class="eyebrow">Cabo Prior · Covas, Ferrol</div>
         <h1>Donde el paisaje gallego se asoma al Atlántico</h1>
         <p>Un refugio íntimo entre acantilados y mar abierto. Despierta con la brisa salina, alarga la sobremesa en la finca y deja que los días marquen otro ritmo.</p>
-        <div class="meta"><span>Hotel boutique</span><span>Cocina de mercado</span><span>Ruta en camper</span></div>
+        <div class="hero-actions">
+          <a class="btn-hero" href="contacto.html#reserva-rapida">Reservar</a>
+          <div class="meta"><span>Hotel boutique</span><span>Cocina de mercado</span><span>Ruta en camper</span></div>
+        </div>
       </div>
     </section>
 
