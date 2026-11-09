@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://maps.google.com https://www.google.com; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co mailto:; base-uri 'self'; upgrade-insecure-requests">
   <title>Finca dos Mares · Hotel boutique y restaurante en Cabo Prior, Ferrol</title>
   <meta name="description" content="Hotel boutique y restaurante con cocina de mercado en una finca junto a Cabo Prior (Ferrol, A Coruña). 7 habitaciones con personalidad propia y furgoneta camper de alquiler.">
   <meta property="og:type" content="website">
@@ -49,9 +51,7 @@
       font-weight:400;
       font-display:swap;
       src:url("assets/fonts/Branch.otf") format("opentype"),
-          url("assets/fonts/Branch.ttf") format("truetype"),
-          url("http://127.0.0.1:8765/assets/fonts/Branch.otf") format("opentype"),
-          url("http://127.0.0.1:8765/assets/fonts/Branch.ttf") format("truetype");
+          url("assets/fonts/Branch.ttf") format("truetype");
     }
     :root{
       --marineiro:#5E7185; /* Azul mariñeiro: títulos y acento principal */
@@ -568,14 +568,6 @@
         });
       });
     }
-    // Si la vista previa estática no resuelve rutas relativas, usa el servidor local de apoyo
-    document.querySelectorAll('img[src^="assets/"]').forEach(img=>{
-      const rel = img.getAttribute('src');
-      const fallback = ()=>{
-        if (img.dataset.inline) { img.src = img.dataset.inline; return; }
-        if (!img.src.startsWith('http://127.0.0.1:8765/')) img.src = 'http://127.0.0.1:8765/' + rel;
-      };
-      img.addEventListener('error', fallback, {once:true});
       if (img.complete && img.naturalWidth === 0) fallback();
     });
     // scroll to top on logo click
@@ -598,6 +590,6 @@
       if(io) io.observe(el); else el.classList.add('in');
     });
   </script>
-  <script src="assets/i18n.js" onerror="var s=document.createElement('script');s.src='http://127.0.0.1:8765/assets/i18n.js';document.body.appendChild(s)"></script>
+  <script src="assets/i18n.js" defer></script>
 </body>
 </html>
