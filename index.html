@@ -282,6 +282,33 @@
     @media (max-width: 780px) {
       .lang-switch { align-self: flex-start; border-color: var(--arnela); color: var(--marineiro); margin-top: 2px; }
     }
+
+    /* Mejora de legibilidad y contraste en Hero y bandas fotográficas */
+    .hero::after {
+      background: linear-gradient(to top, rgba(16, 23, 30, 0.84) 0%, rgba(16, 23, 30, 0.58) 52%, rgba(16, 23, 30, 0.38) 100%) !important;
+    }
+    .hero h1, .band h2 {
+      color: #ffffff !important;
+      text-shadow: 0 2px 20px rgba(10, 15, 20, 0.65), 0 1px 4px rgba(10, 15, 20, 0.45);
+    }
+    .hero p, .band p {
+      color: #ffffff !important;
+      font-weight: 400 !important;
+      text-shadow: 0 1px 14px rgba(10, 15, 20, 0.65);
+    }
+    .hero .eyebrow, .band .eyebrow {
+      color: #f3ead8 !important;
+      font-weight: 600 !important;
+      text-shadow: 0 1px 10px rgba(10, 15, 20, 0.65);
+    }
+    .hero .meta, .hero .meta a {
+      color: #f3ead8 !important;
+      font-weight: 600 !important;
+      text-shadow: 0 1px 10px rgba(10, 15, 20, 0.65);
+    }
+    .band::after {
+      background: linear-gradient(to right, rgba(16, 23, 30, 0.78) 0%, rgba(16, 23, 30, 0.56) 65%, rgba(16, 23, 30, 0.44) 100%) !important;
+    }
   </style>
 </head>
 <body>
